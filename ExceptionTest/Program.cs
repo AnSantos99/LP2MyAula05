@@ -23,7 +23,7 @@ namespace ExceptionTest
             }
 
             // Catches Overflow type of exception
-            catch (OverflowException c) 
+            catch (OverflowException c)
             {
                 Console.WriteLine("Overflow Exception" + c.Message);
             }
@@ -32,6 +32,13 @@ namespace ExceptionTest
             catch (Exception a)
             {
                 Console.WriteLine("Ocorreu o seguinte problema" + a.Message);
+            }
+
+            // Always executes with out without exception
+            finally 
+            {
+                Console.WriteLine("Thank you for using this program. With or" +
+                    " without Exception");
             }
             
         }
