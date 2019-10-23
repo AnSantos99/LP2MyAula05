@@ -16,8 +16,18 @@ namespace ExceptionTest
                 Console.WriteLine($"Numero inserido : {i}");
             }
 
-            // Apanha ecepcoes se algo for diferrente
-            catch (Exception a) 
+            catch (FormatException b)
+            {
+                Console.WriteLine("Format exception problem. " + b.Message);
+            }
+
+            catch (OverflowException c) 
+            {
+                Console.WriteLine("Overflow Exception" + c.Message);
+            }
+
+            // Apanha excepcoes se algo for diferrente
+            catch (Exception a)
             {
                 Console.WriteLine("Ocorreu o seguinte problema" + a.Message);
             }
