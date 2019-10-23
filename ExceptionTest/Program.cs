@@ -6,27 +6,29 @@ namespace ExceptionTest
     {
         static void Main(string[] args)
         {
-            // Imprimir informacao
+            // Print out text
             Console.WriteLine("Insere um numero inteiro");
 
-            // Tenta correr este bloco
+            // Try to run this block of code
             try
             {
                 int i = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine($"Numero inserido : {i}");
             }
 
+            // Catches Format type of exceptions
             catch (FormatException b)
             {
                 Console.WriteLine("Format exception problem. " + b.Message);
             }
 
+            // Catches Overflow type of exception
             catch (OverflowException c) 
             {
                 Console.WriteLine("Overflow Exception" + c.Message);
             }
 
-            // Apanha excepcoes se algo for diferrente
+            // Catches any kind of general Exception
             catch (Exception a)
             {
                 Console.WriteLine("Ocorreu o seguinte problema" + a.Message);
